@@ -1,0 +1,12 @@
+{
+  "name": "ing-logiciel",
+  "version": "1.0.0",
+  "description": "git log\r # Sortie :\r # Author: PSYSHX <ayman.chergui@isen.yncrea.fr>\r ----------\r # 2. Combien de branches contient le dépôt ?\r git branch -a\r # Sortie :\r # * main\r #   remotes/origin/main\r ----------\r # 3. Qui est le contributeur principal ?\r git shortlog -sn\r # Sortie :\r # 1  PSYSHX\r ----------\r # 4. Combien de tags contient le dépôt ?\r git tag\r # Sortie :\r # (Aucun tag trouvé)\r ----------\r # 5. Le dépôt est-il lié à un système d'intégration continue (CI/CD) comme Jenkins ou Travis CI ?\r # Vérification des fichiers de configuration CI/CD :\r ls | grep Jenkinsfile\r ls -a | grep .travis.yml\r ls -a .github/workflows\r ls -a | grep .gitlab-ci.yml\r # Sortie :\r # Aucun fichier de configuration CI/CD détecté.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
