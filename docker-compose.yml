@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    ports:
+      - "4566:4566" # Port principal pour les services AWS
+      - "4571:4571" # Lambda (facultatif)
+    environment:
+      - SERVICES=s3,dynamodb,lambda,iam # Services activés
+      - DEBUG=1 # Activer les logs de debug
+      - DATA_DIR=/tmp/localstack/data # Persistance des données (facultatif)
+    volumes:
+      - "./localstack:/etc/localstack" # Montez un dossier local pour config
+      - "/var/run/docker.sock:/var/run/docker.sock" # Nécessaire pour Lambda
